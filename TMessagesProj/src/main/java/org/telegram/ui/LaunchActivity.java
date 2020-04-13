@@ -258,13 +258,6 @@ public class LaunchActivity extends Activity implements ActionBarLayout.ActionBa
             }
         });
 
-        if (SharedConfig.passcodeHash.length() > 0 && !SharedConfig.allowScreenCapture) {
-            try {
-                getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-            } catch (Exception e) {
-                FileLog.e(e);
-            }
-        }
 
         super.onCreate(savedInstanceState);
         if (Build.VERSION.SDK_INT >= 24) {
